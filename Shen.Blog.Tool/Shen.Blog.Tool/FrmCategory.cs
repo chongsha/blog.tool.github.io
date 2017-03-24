@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,8 +30,12 @@ namespace Shen.Blog.Tool
             if (data.Id == 0)
             {
                 CategoryDAL.Insert(data);
+                this.BeginInvoke(new Action(() =>
+                {
+                    Thread.Sleep(500);
+                    FrmCategory_Load(null, null);
+                }));
 
-                FrmCategory_Load(null, null);
             }
             else
                 CategoryDAL.Update(data);
@@ -38,6 +43,7 @@ namespace Shen.Blog.Tool
 
         private void FrmCategory_Load(object sender, EventArgs e)
         {
+            dataGridView1.EndEdit();
             var data = CategoryDAL.GetCategories();
 
             data.Add(new Category());

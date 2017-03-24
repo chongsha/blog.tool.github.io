@@ -13,24 +13,25 @@
 <body>
     <!-- 加载编辑器的容器 -->
     <!--<script id="container" name="content" type="text/plain"></script>-->
-   <textarea id="container" name="content"></textarea>
+    <textarea id="container" name="content"></textarea>
     <!-- 实例化编辑器 -->
     <script type="text/javascript">
         var height = $(window).height();
         var ue;
-        //var _content;
-        //window.setContent = function (content) {
-        //    _content = content;
-        //}
 
         window.getContent = function () {
-            ue.getContent();
+            return ue.getContent();
         }
+
+
 
         window.init = function (content) {
             $("#container").val(content);
             ue = UE.getEditor('container', { initialFrameHeight: height - 150 });
+        }
 
+        window.getContentTxt = function () {
+            return ue.getContentTxt();
         }
 
     </script>

@@ -11,9 +11,7 @@ namespace Shen.Blog.Tool.Model
     /// </summary>
     class Article
     {
-        public int Id { get; set; }
-
-        public Guid Uuid { get; set; }
+        public long Id { get; set; }
 
         public string Title { get; set; }
 
@@ -23,7 +21,11 @@ namespace Shen.Blog.Tool.Model
 
         public bool HasChange { get; set; }
 
-        public int CategoryId { get; set; }
+        public long CategoryId { get; set; }
 
+        /// <summary>
+        /// 摘要
+        /// </summary>
+        public string Summary { get; set; }
     }
 }

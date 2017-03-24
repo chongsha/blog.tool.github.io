@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSortNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,15 +54,16 @@
             // 
             this.colName.DataPropertyName = "Name";
             this.colName.HeaderText = "分类名称";
+            this.colName.MaxInputLength = 10;
             this.colName.Name = "colName";
             this.colName.Width = 200;
             // 
             // colSortNum
             // 
             this.colSortNum.DataPropertyName = "SortNum";
-            dataGridViewCellStyle7.Format = "N0";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.colSortNum.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.colSortNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.colSortNum.HeaderText = "排序";
             this.colSortNum.Name = "colSortNum";
             // 
