@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Shen.Blog.Tool
 {
-    public partial class Form1 : Form
+    public partial class FrmArticles : Form
     {
-        public Form1()
+        public FrmArticles()
         {
             InitializeComponent();
         }
